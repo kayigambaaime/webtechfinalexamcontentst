@@ -1,0 +1,51 @@
+/* Dashboard */
+.dashboard {
+  display: flex;
+  margin-left: 180px; /* Adjusted to increase the container width slightly */
+  height: 100vh; /* Full height */
+}
+
+/* Dashboard content */
+.dashboard-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f5f5f5; /* Light background for the content area */
+  overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+/* Dashboard container */
+.dashboard-container {
+  display: flex; /* Flexbox for horizontal alignment */
+  flex-grow: 1; /* Ensures the container fills the available space */
+  height: 100vh; /* Full height */
+  margin-left: 150px; /* Adjusted to increase the width of the container */
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: nowrap; /* Prevents columns from wrapping */
+}
+
+/* Columns */
+.column {
+  min-width: 150px; /* Set a minimum width for columns */
+  flex: 0 0 auto; /* Prevents columns from shrinking */
+}
+
+/* Apply horizontal scroll on small screens */
+@media (max-width: 768px) {
+  .dashboard-container {
+    overflow-x: auto; /* Enables horizontal scrolling */
+  }
+}
+
+/* Content */
+.content {
+  flex-grow: 1; /* Takes up remaining space */
+  padding: 8px;
+  background-color: #ecf0f1; /* Background for the content area */
+  overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+/* Dark Mode for Dashboard Content */
+.dark-mode .dashboard-content {
+  background-color: #2a2b36; /* Dark mode background */
+  color: white;
+}
